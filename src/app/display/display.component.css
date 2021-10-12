@@ -1,0 +1,10 @@
+.task__item {
+  box-shadow: -15px 13px 13px -8px rgba(33,28,28,0.75);
+  border: 5px solid rgba(255,255,255,0.50);
+}
+.task__item:nth-child(even) {
+  background-color: #28a745 ;
+}
+.task__item:nth-child(odd) {
+  background-color: #ffc107;
+}

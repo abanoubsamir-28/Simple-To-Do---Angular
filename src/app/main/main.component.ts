@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  task = "" ;
+  taskSent(task:string) {
+    console.log("from Parent",task) ;
+    this.task = task ;
+  }
   constructor() { }
 
   ngOnInit(): void {

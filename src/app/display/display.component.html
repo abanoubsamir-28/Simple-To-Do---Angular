@@ -1,1 +1,11 @@
-<p>display works!</p>
+<section class="tasks container py-5">
+  <div class="task__item d-flex justify-content-between my-3 py-3 px-5" *ngFor="let taskItem of tasks"
+    [ngClass]="{'text-decoration-line-through': taskItem.completed == true}">
+    <h3>{{taskItem.name}}</h3>
+    <div class="task__controls">
+      <button class="btn btn-success mx-3" id={{taskItem.id}} (click)="completeTask($event)"
+        [ngClass]="{'disabled': taskItem.completed == true}">Complete</button>
+      <button class="btn btn-danger" id={{taskItem.id}} (click)="deleteTask($event)">Delete</button>
+    </div>
+  </div>
+</section>
